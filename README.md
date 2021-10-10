@@ -2,6 +2,8 @@
 
 Setup a demo website for browsing policy
 
+used time: 3hrs
+
 | Library       | Description              |
 | ------------- |:---------------------:   |
 | jest,enzyme   | automated Testing        |
