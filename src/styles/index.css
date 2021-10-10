@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    font-weight: 600;
+}
+
+.category {
+    margin-bottom: 1rem;
+}
