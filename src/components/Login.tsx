@@ -49,37 +49,43 @@ const Login = (): JSX.Element => {
             <h1 className="card-title">Sign In</h1>
             <div className="divider" />
             <div className="form-control">
-                <label htmlFor="username" className="label">
-                    <h2>User Name:</h2>
-                </label>
-                <input
-                    id="username"
-                    type="text"
-                    name="username"
-                    placeholder="username"
-                    className="input input-bordered"
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        handleChange(e)
-                    }
-                    value={username}
-                />
-                <label htmlFor="password" className="label">
-                    <h2>Password:</h2>
-                </label>
-                <input
-                    id="password"
-                    type="text"
-                    name="password"
-                    placeholder="password"
-                    className="input input-bordered"
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        handleChange(e)
-                    }
-                    value={password}
-                />
+                <div className="category">
+                    <label htmlFor="username" className="label">
+                        <h2>User Name:</h2>
+                    </label>
+                    <input
+                        id="username"
+                        type="text"
+                        name="username"
+                        placeholder="username"
+                        className="input input-bordered"
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            handleChange(e)
+                        }
+                        value={username}
+                    />
+                </div>
+                <div className="category">
+                    <label htmlFor="password" className="label">
+                        <h2>Password:</h2>
+                    </label>
+                    <input
+                        id="password"
+                        type="text"
+                        name="password"
+                        placeholder="password"
+                        className="input input-bordered"
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                            handleChange(e)
+                        }
+                        value={password}
+                    />
+                </div>
             </div>
-            {error ? <h1 className="text-red-500">Error, please try again!</h1> : null}
-            <div className="flex justify-end mt-4">
+            {error ? (
+                <h1 className="text-red-500">Error, please try again!</h1>
+            ) : null}
+            <div className="flex justify-end">
                 <button
                     disabled={!Boolean(username && password)}
                     className="btn btn-primary"

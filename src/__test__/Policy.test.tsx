@@ -7,6 +7,10 @@ const setup = (props = {}, state = null) => {
     return shallow(<Policy {...props} />);
 };
 
+jest.mock("react-router-dom", () => ({
+    useLocation: jest.fn(),
+}));
+
 test("check if Policy runs successfully", () => {
     const wrapper = setup();
 });

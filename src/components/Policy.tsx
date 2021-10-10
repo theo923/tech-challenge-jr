@@ -30,19 +30,28 @@ const Policy = (): JSX.Element => {
             <div className="divider category" />
             <div className="category">
                 <h2>Policy reference:</h2>
-                <p>{info?.policy?.policy_reference}</p>
+                <p>{info?.policy?.policy_reference || "Loading..."}</p>
             </div>
             <div className="category">
                 <h2>Cover type:</h2>
-                <p>{info?.policy?.cover}</p>
+                <p>{info?.policy?.cover || "Loading..."}</p>
             </div>
             <div className="category">
                 <h2>Car:</h2>
-                <p>{`${info?.vehicle?.make} ${info?.vehicle?.model} ${info?.vehicle?.colour} -${info?.vehicle?.reg}`}</p>
+                <p>
+                    {`${info?.vehicle?.make || "Loading..."} 
+                    ${info?.vehicle?.model || ""} 
+                    ${info?.vehicle?.colour || ""} 
+                    -${info?.vehicle?.reg || ""}` || ""}
+                </p>
             </div>
             <div className="category">
                 <h2>Address:</h2>
-                <p>{`${info?.policy?.address?.line_1}, ${info?.policy?.address?.line_2}, ${info?.policy?.address?.postcode}`}</p>
+                <p>
+                    {`${info?.policy?.address?.line_1 || "Loading..."}, 
+                    ${info?.policy?.address?.line_2 || ""}, 
+                    ${info?.policy?.address?.postcode || ""}`}
+                </p>
             </div>
         </div>
     );
