@@ -6,8 +6,8 @@ used time: 3hrs
 
 | Library       | Description              |
 | ------------- |:---------------------:   |
-| jest,enzyme   | automated Testing        |
+| jest,enzyme   | automated testing        |
 | react-router  | browse different pages   |
 | typescript    | type checking            |
 | axios         | fetching data            |
-| TailwindCSS   | simplify CSS codes( no more than 3 class)|
+| TailwindCSS   | simplify CSS codes(not more than 3 classes)|
